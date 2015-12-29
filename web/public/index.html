@@ -3,21 +3,20 @@
 <head>
     <base href="/">
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scaled=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SentimentAnalysis</title>
     <link rel="icon" type="image/png" href="favicon.png"/>
     <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 <body>
-<!-- Create an AngularJS navbar --->
+
 <div class="navbar navbar-default navbar-static-top"
      role="navigation" bs-navbar>
     <div class="navbar-header">
         <a class="navbar-brand" href="/">
             <span class="glyphicon glyphicon-film"></span>
-            Sentiment<strong>Analysis</strong>
-        </a>
+            Show<strong>Trackr</strong></a>
     </div>
     <ul class="nav navbar-nav">
         <li data-match-route="/$"><a href="/">Home</a></li>
@@ -25,23 +24,23 @@
     </ul>
     <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
         <li data-match-route="/login"><a href="/login">Login</a></li>
-        <li data-match-route="/signup"><a href="/signup">Sign Up</a></li>
+        <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
     </ul>
     <ul class="nav navbar-nav pull-right" ng-if="currentUser">
         <li class="navbar-text" ng-bind="currentUser.email"></li>
-        <li><a href="javascripts:void(0)" ng-click="logout()">Logout</a></li>
+        <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
     </ul>
 </div>
 
 <div ng-view></div>
 
 <script src="vendor/angular.js"></script>
-<script src="vendor/angular-cookies.js"></script>
 <script src="vendor/angular-strap.js"></script>
 <script src="vendor/angular-strap.tpl.js"></script>
 <script src="vendor/angular-messages.js"></script>
-<script src="vendor/angular-route.js"></script>
 <script src="vendor/angular-resource.js"></script>
+<script src="vendor/angular-route.js"></script>
+<script src="vendor/angular-cookies.js"></script>
 <script src="vendor/moment.min.js"></script>
 <script src="app.js"></script>
 
