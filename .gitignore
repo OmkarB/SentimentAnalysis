@@ -1,4 +1,4 @@
-node_modules
+web/node_modules
 public
 app.js
 gulpfile.js
