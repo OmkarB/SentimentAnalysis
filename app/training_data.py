@@ -60,8 +60,8 @@ def get_features(vector):
 
 
 def concat_features():
-    neg_features = get_features(data_neg)
-    pos_features = get_features(data_pos)
+    neg_features = get_features(data_neg[:500])
+    pos_features = get_features(data_pos[:500])
     full_features = []
     for row in neg_features:
         full_features.append((row, "neg"))
@@ -106,6 +106,9 @@ print("Features have been extracted, you may proceed")
 classifier = nltk.NaiveBayesClassifier.train(training_set)
 print("Training completed")
 
-tweet = 'Larry is my friend'
+tweet = 'this below expectation happy'
+
+print(classifier.show_most_informative_features(32))
+print(extract_features(tweet.split()))
 print(classifier.classify(extract_features(tweet.split())))
 
